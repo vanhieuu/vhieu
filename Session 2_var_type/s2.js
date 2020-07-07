@@ -1,28 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài_tập_session_2</title>
-</head>
-<body>
-    <script>
-               const pi= 3.14;
-    //         let chon = "0";
-    //         prompt("Chọn bài tập");
-    //             switch (chon) {
-    //      case '1':chon
-    //          tinhhinhtron()
-    //      case '2':chon
-    //         tinhhinhchunhat();
-    //     case '3':chon 
-    //         tinhgtbt();
-    //     case '4':chon
-    //         quydoitien();
-    //                 break;
-    //      default:chon
-    //  }
-     function tinhhinhtron(){
+const pi= 3.14;
+            let chon = prompt("Chọn bài tập")
+                switch (chon) {
+         case '1':
+             tinhHinhTron()
+             break;
+         case '2':
+            tinhHinhChuNhat();
+            break;
+        case '3': 
+            tinhGTBT();
+            break;
+        case '4':
+            quyDoiTien();
+            break;
+        case '5':
+            tinhTongCacChuSo();
+            break;
+         default:
+     }
+     function tinhHinhTron(){
         var r = prompt("Nhập vào giá trị của r ");
          
                 var S = pi*r*r;
@@ -30,31 +26,31 @@
                 console.log( ("Diện tích hình tròn là:= " + S));
                 console.log( "Chu vi hình tròn là:= " + C);
      }
-     tinhhinhtron();
-     function tinhhinhchunhat(){
+     tinhHinhTron();
+     function tinhHinhChuNhat(){
         var cd = prompt("Nhập vào chiều dài của hình chữ nhật");
         var cr = prompt("Nhập vào chiều rộng của hình chữ nhật");
             var dt = cd * cr;
                 console.log("Diện tích hình chữ nhật là :=" + dt);
      }
-     tinhhinhchunhat();
-     function tinhgtbt(){
+     tinhHinhChuNhat();
+     function tinhGTBT(){
          var x = prompt("Nhập vào giá trị của x");
          var y1 = 4*(Math.pow(x,2) + 10*x*Math.sqrt(x) +3*x +1);
          var y2 = (Math.sin(pi*Math.pow(x,2)) + Math.sqrt((Math.pow(x,2) +1 ))/(Math.pow(Math.E,2*x)+ Math.cos((pi/4)*x)));
             console.log("Gía trị của biểu thức y1:= "+ y1);
             console.log("Gía trị của biểu thức y2:= " + y2); 
      }
-     tinhgtbt();
-     function quydoitien() {
-        var t = prompt("Nhập vào số tiền cần đổi");
-        var t100 = t/100000;
+     tinhGTBT();
+     function quyDoiTien() {
+        let t = parseInt(prompt("Nhập vào số tiền cần đổi"));
+        let t100 = t/100000;
            t   -= 100000*t100;
-       var t50 = t/50000
-             t   -=  50000*t50
-       var t20 = t/20000
+       let t50 = t/50000
+             t  -= 50000*t50
+       let t20 = t/20000
             t  -=  20000*t20
-       var  t10 = t/10000;
+       let  t10 = t/10000;
              t -=  10000*t10;
         console.log("Số tờ mệnh giá các loại là : ");
         console.log(t100 + " tờ 100000");
@@ -62,28 +58,15 @@
         console.log(t20 +  " Tờ 20000");
         console.log(t10 +  " Tờ 10000");
      }
-     quydoitien();
-     function tinhtongcacchuso() {
-        var n = prompt("Nhập vào số n:= ")
+     quyDoiTien();
+     function tinhTongCacChuSo() {
+        var n = parseInt(prompt("Nhập vào số n:= "));
         var s = 0;
         while(n>0){
         var soDu = n % 10;
-            n /= 10; 
+            n /= 10;
             s = s + soDu;
-            Math.ceil(s,1);
         }
                 console.log("Tổng các chữ số := " + s);   
-        
     }
-         tinhtongcacchuso();
-            
-        
-
-        
-     
-            
-            
-    
-</script>
-</body>
-</html>
+            tinhTongCacChuSo();
