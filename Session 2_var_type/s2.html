@@ -8,6 +8,20 @@
 <body>
     <script>
                const pi= 3.14;
+    //         let chon = "0";
+    //         prompt("Chọn bài tập");
+    //             switch (chon) {
+    //      case '1':chon
+    //          tinhhinhtron()
+    //      case '2':chon
+    //         tinhhinhchunhat();
+    //     case '3':chon 
+    //         tinhgtbt();
+    //     case '4':chon
+    //         quydoitien();
+    //                 break;
+    //      default:chon
+    //  }
      function tinhhinhtron(){
         var r = prompt("Nhập vào giá trị của r ");
          
@@ -16,14 +30,13 @@
                 console.log( ("Diện tích hình tròn là:= " + S));
                 console.log( "Chu vi hình tròn là:= " + C);
      }
-      tinhhinhtron();
+
      function tinhhinhchunhat(){
         var cd = prompt("Nhập vào chiều dài của hình chữ nhật");
         var cr = prompt("Nhập vào chiều rộng của hình chữ nhật");
             var dt = cd * cr;
                 console.log("Diện tích hình chữ nhật là :=" + dt);
      }
-     tinhhinhchunhat();
      function tinhgtbt(){
          var x = prompt("Nhập vào giá trị của x");
          var y1 = 4*(Math.pow(x,2) + 10*x*Math.sqrt(x) +3*x +1);
@@ -31,24 +44,24 @@
             console.log("Gía trị của biểu thức y1:= "+ y1);
             console.log("Gía trị của biểu thức y2:= " + y2); 
      }
-        tinhgtbt();
      function quydoitien() {
         var t = prompt("Nhập vào số tiền cần đổi");
-        var t100 = t/100;
-           t   -= 100*t100;
-       var t50 = t/50
-             t   -= 50*t50
-       var t20 = t/20
-        t -= 20*t20
-       var  t10 = t/10;
-        t -= 10*t10;
+        var t100 = t/100000;
+           t   -= 100000*t100;
+       var t50 = t/50000
+             t   -=  50000*t50
+       var t20 = t/20000
+            t  -=  20000*t20
+       var  t10 = t/10000;
+             t -=  10000*t10;
         console.log("Số tờ mệnh giá các loại là : ");
-        console.log(t100 + "tờ 100");
-        console.log(t50 +  "Tờ 50");
-        console.log(t20 +  "Tờ 20");
-        console.log(t10 +  "Tờ 10");
+        console.log(t100 + " tờ 100000");
+        console.log(t50 +  " Tờ 50000");
+        console.log(t20 +  " Tờ 20000");
+        console.log(t10 +  " Tờ 10000");
      }
-         quydoitien();
+     
+     
             
             
     
