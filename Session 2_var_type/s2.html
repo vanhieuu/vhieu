@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chu vi và dien tich hinh tron</title>
+    <title>Bài_tập_session_2</title>
 </head>
 <body>
     <script>
@@ -27,13 +27,28 @@
      function tinhgtbt(){
          var x = prompt("Nhập vào giá trị của x");
          var y1 = 4*(Math.pow(x,2) + 10*x*Math.sqrt(x) +3*x +1);
-         var y2 = (Math.sin(pi*Math.pow(x,2)) + Math.sqrt(Math.pow(x,2) +1 ))/(Math.pow(Math.E,2*x)+ Math.cos((pi/4)*x));
+         var y2 = (Math.sin(pi*Math.pow(x,2)) + Math.sqrt((Math.pow(x,2) +1 ))/(Math.pow(Math.E,2*x)+ Math.cos((pi/4)*x)));
             console.log("Gía trị của biểu thức y1:= "+ y1);
             console.log("Gía trị của biểu thức y2:= " + y2); 
      }
         tinhgtbt();
-     document.writeln("E = "+ Math.E);
-         
+     function quydoitien() {
+        var t = prompt("Nhập vào số tiền cần đổi");
+        var t100 = t/100;
+           t   -= 100*t100;
+       var t50 = t/50
+             t   -= 50*t50
+       var t20 = t/20
+        t -= 20*t20
+       var  t10 = t/10;
+        t -= 10*t10;
+        console.log("Số tờ mệnh giá các loại là : ");
+        console.log(t100 + "tờ 100");
+        console.log(t50 +  "Tờ 50");
+        console.log(t20 +  "Tờ 20");
+        console.log(t10 +  "Tờ 10");
+     }
+         quydoitien();
             
             
     
