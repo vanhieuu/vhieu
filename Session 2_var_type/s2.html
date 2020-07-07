@@ -7,21 +7,32 @@
 </head>
 <body>
     <script>
-        // const pi =3.14;
-        //     var chon = 0;
-        //     var r = prompt("Nhap vao ban kinh hinh tron := ");
-        //         var C = 2*pi*r;
-        //         var S = pi*r*r;
-        //         document.writeln('Dien tich hinh tron la:= '+ S +'\n');
-        //         document.writeln("Chu vi hinh tron la:= " + C);
+               const pi= 3.14;
+     function tinhhinhtron(){
         var r = prompt("Nhập vào giá trị của r ");
-                const pi= 3.14;
+         
                 var S = pi*r*r;
                 var C = 2*pi*r;
-                document.writeln("Diện tích hình tròn là:= " + S);
-                document.writeln("Chu vi hình tròn là:= " + C);
-            
-            
+                console.log( ("Diện tích hình tròn là:= " + S));
+                console.log( "Chu vi hình tròn là:= " + C);
+     }
+      tinhhinhtron();
+     function tinhhinhchunhat(){
+        var cd = prompt("Nhập vào chiều dài của hình chữ nhật");
+        var cr = prompt("Nhập vào chiều rộng của hình chữ nhật");
+            var dt = cd * cr;
+                console.log("Diện tích hình chữ nhật là :=" + dt);
+     }
+     tinhhinhchunhat();
+     function tinhgtbt(){
+         var x = prompt("Nhập vào giá trị của x");
+         var y1 = 4*(Math.pow(x,2) + 10*x*Math.sqrt(x) +3*x +1);
+         var y2 = (Math.sin(pi*Math.pow(x,2)) + Math.sqrt(Math.pow(x,2) +1 ))/(Math.pow(Math.E,2*x)+ Math.cos((pi/4)*x));
+            console.log("Gía trị của biểu thức y1:= "+ y1);
+            console.log("Gía trị của biểu thức y2:= " + y2); 
+     }
+        tinhgtbt();
+
          
             
             
