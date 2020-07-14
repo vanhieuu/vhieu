@@ -1,22 +1,36 @@
-var a = Number(prompt("Nhập vào số a"));
-var b = Number(prompt("Nhập vào số b"));
-var c = Number(prompt("Nhập vào số c"));
+
 let chon = Number(prompt("Chọn bài tập"))
 switch (chon) {
     case 1 :
+        var a = Number(prompt("Nhập vào số a"));
+    var b = Number(prompt("Nhập vào số b"));
+    var c = Number(prompt("Nhập vào số c"));
         max();
         break;
     case 2 :
+        var a = Number(prompt("Nhập vào số a"));
+        var b = Number(prompt("Nhập vào số b"));
+    var c = Number(prompt("Nhập vào số c"));
         sapxep();
         break;
     case 3 :
+        var a = Number(prompt("Nhập vào số a"));
+        var b = Number(prompt("Nhập vào số b"));
+        var c = Number(prompt("Nhập vào số c"));
         BMI();
     case 4 :
         ngaythang();
         break;
+    case 5: 
+        tamgiac();
+        break;
+    case 6:
+        giadien();
+        break;
         default:
             alert("Nhập sai bài tập, vui lòng chọn lại");
             break;
+    
 }    
 function max(){
         let max = a;
@@ -106,4 +120,54 @@ function max(){
                     
             }
         }
-        
+    function tamgiac(){
+        let a = parseInt(prompt("Nhập vào độ dài cạnh a"));
+        let b = parseInt(prompt("Nhập vào độ dài cạnh b"));
+        let c = parseInt(prompt("Nhập vào độ dài cạnh c"));
+        if (a + b > c && b + c > a && a + c > b ) {
+                console.log("Đây là 1 tam giác ");
+        }
+        else {
+            console.log("Đây không phải 3 cạnh của 1 tam giác");
+        }
+                 if ( b === c && b===a & c===a ){
+                    console.log("Đây là tam giác đều ");
+                }
+                else if (b===c || b===a || a === c   ){
+                    console.log("Đây là tam giác cân");
+                }
+                else if (c*c == a*a + b*b || a*a == b*b + c*c || b*b == a*a + c*c ){
+                        console.log("Đây là tam giác vuông ");
+                }
+           
+    }
+    function giadien() {
+        let sotien;
+        let bac1 = 1678;
+        let bac2 = 1734;
+        let bac3 = 2014;
+        let bac4 = 2536;
+        let bac5 = 2834;
+        let bac6 = 2927;
+        let sdsd = parseFloat(prompt("Nhập vào số điện sử dụng:= "))
+            if ( 0 <= sdsd && sdsd <=50) {
+                let sotien = sdsd * 1678;
+                console.log("Số điện sử dụng thuộc bậc 1:= " + bac1 + " Nghìn đồng," + " Số tiền phải trả là:= " + sotien );
+                    }
+                else if ( sdsd <= 100 ){
+                    console.log("Số điện sử dụng thuộc bậc 2:= " + bac2 + " Nghìn đồng," +" Số tiền phải trả là:=  " + (bac2*sdsd)+ " Nghìn đồng" );
+                }
+                    else if (sdsd <= 200){
+                        console.log("Số điện sử dụng thuộc bậc 3:= " + bac3 + " Nghìn đồng,"+ " Số tiền phải trả là:= " + (bac3*sdsd)+ " Nghìn đồng");
+                    }
+                        else if (sdsd <=300){
+                            console.log("Số điện sử dụng thuộc bậc 4:= " + bac4 + " Nghìn đồng," +" Số tiền phải trả là:= " + (bac4*sdsd)+ " Nghìn đồng");
+                        }
+                        else if (sdsd <=400){
+                            console.log("Số điện sử dụng thuộc bậc 5:= " + bac5 + " Nghìn đồng," +" Số tiền phải trả là:= " + (bac5*sdsd)+ " Nghìn đồng");
+                        }   
+                        else{
+                            console.log("Số điện sử dụng thuộc bậc 6:= " + bac6 + " Nghìn đồng," +" Số tiền phải trả là:= " + (bac6*sdsd) + " Nghìn đồng");
+                        }
+                    }
+                
