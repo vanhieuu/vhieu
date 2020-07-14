@@ -35,9 +35,9 @@ const pi= 3.14;
      }
      tinhHinhChuNhat();
      function tinhGTBT(){
-         var x = prompt("Nhập vào giá trị của x");
+         var x = parseInt(prompt("Nhập vào giá trị của x"));
          var y1 = 4*(Math.pow(x,2) + 10*x*Math.sqrt(x) +3*x +1);
-         var y2 = (Math.sin(pi*Math.pow(x,2)) + Math.sqrt((Math.pow(x,2) +1 ))/(Math.pow(Math.E,2*x)+ Math.cos((pi/4)*x)));
+         var y2 = (Math.sin(pi*Math.pow(x,2)) + Math.sqrt((Math.pow(x,2) +1 ))/(Math.pow(Math.E,2*x))+ Math.cos((pi/4)*x));
             console.log("Gía trị của biểu thức y1:= "+ y1);
             console.log("Gía trị của biểu thức y2:= " + y2); 
      }
