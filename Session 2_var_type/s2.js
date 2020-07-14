@@ -26,14 +26,12 @@ const pi= 3.14;
                 console.log( ("Diện tích hình tròn là:= " + S));
                 console.log( "Chu vi hình tròn là:= " + C);
      }
-     tinhHinhTron();
      function tinhHinhChuNhat(){
         var cd = prompt("Nhập vào chiều dài của hình chữ nhật");
         var cr = prompt("Nhập vào chiều rộng của hình chữ nhật");
             var dt = cd * cr;
                 console.log("Diện tích hình chữ nhật là :=" + dt);
      }
-     tinhHinhChuNhat();
      function tinhGTBT(){
          var x = parseInt(prompt("Nhập vào giá trị của x"));
          var y1 = 4*(Math.pow(x,2) + 10*x*Math.sqrt(x) +3*x +1);
@@ -41,7 +39,6 @@ const pi= 3.14;
             console.log("Gía trị của biểu thức y1:= "+ y1);
             console.log("Gía trị của biểu thức y2:= " + y2); 
      }
-     tinhGTBT();
      function quyDoiTien() {
         let t = parseInt(prompt("Nhập vào số tiền cần đổi"));
         let t100 = Math.floor(t/100000);
@@ -58,7 +55,6 @@ const pi= 3.14;
         console.log(t20 +  " Tờ 20000");
         console.log(t10 +  " Tờ 10000");
      }
-     quyDoiTien();
      function tinhTongCacChuSo() {
         var n = parseInt(prompt("Nhập vào số n:= "));
         var s = 0;
@@ -68,5 +64,4 @@ const pi= 3.14;
             n = Math.floor(n/10);
         }
                 console.log("Tổng các chữ số := " + s);   
-    }
-            tinhTongCacChuSo();
+     }
