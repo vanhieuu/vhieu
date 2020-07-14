@@ -44,13 +44,13 @@ const pi= 3.14;
      tinhGTBT();
      function quyDoiTien() {
         let t = parseInt(prompt("Nhập vào số tiền cần đổi"));
-        let t100 = t/100000;
+        let t100 = Math.floor(t/100000);
            t   -= 100000*t100;
-       let t50 = t/50000
+       let t50 = Math.floor(t/50000);
              t  -= 50000*t50
-       let t20 = t/20000
+       let t20 = Math.floor(t/20000);
             t  -=  20000*t20
-       let  t10 = t/10000;
+       let  t10 = Math.floor(t/10000);
              t -=  10000*t10;
         console.log("Số tờ mệnh giá các loại là : ");
         console.log(t100 + " tờ 100000");
@@ -62,10 +62,10 @@ const pi= 3.14;
      function tinhTongCacChuSo() {
         var n = parseInt(prompt("Nhập vào số n:= "));
         var s = 0;
-        while(n>0){
+        while(n!=0){
         var soDu = n % 10;
-            n /= 10;
             s = s + soDu;
+            n = Math.floor(n/10);
         }
                 console.log("Tổng các chữ số := " + s);   
     }
