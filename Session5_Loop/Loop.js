@@ -8,7 +8,7 @@ function bai1(){
 function bai2(){
     let dem = parseInt(prompt("Bắt đầu in từ "));
     while ( 0 <= dem && dem <= 100 ){
-        console.log("In " + dem );
+        console.log("In " + dem );  
         dem--;
     }
 }
@@ -51,4 +51,36 @@ function bai6(){
     }
         console.log("Tổng:= " + tong);
 }
-bai6();
+function bai7(){
+    var n = parseInt(prompt("Nhập N"))
+    let tong = parseInt(0);
+        for (let i = 0; i <=n ; i++) {
+            tong = tong + 2*i;
+        }
+            console.log("Tổng:= " + tong);
+}
+function bai8(){
+    var n = parseInt(prompt("Nhập N"));
+    let tong = parseInt(0);
+        while (n < 0){
+           prompt("Nhập lại n " );
+            }
+            for (let i = 1; i <=n ; i++) {
+                tong += 1/i;
+            }
+            console.log("Tổng:= " + tong);
+        }
+function bai9() {
+    var n = parseInt(prompt("Nhập N"));
+    let tong = parseInt(0);
+        while (n < 0) {
+            prompt("Nhập lại N");
+        }
+            for (let i = 1;i <= n; i++){
+                let gt = i*(i+1)
+                tong += 1/gt;
+               
+            }
+            console.log("Tổng:= " + tong);    
+}
+bai9();
