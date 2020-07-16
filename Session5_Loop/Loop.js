@@ -1,3 +1,39 @@
+let chon = parseInt(prompt("Chọn bài tập"));
+    switch (chon){
+        case 1 : 
+                bai1();
+                break;
+        case 2:
+                bai2();
+                break;
+        case 3:
+                bai3();
+                break;
+        case 4:
+                bai4();
+                break;
+        case 5:
+                bai5();
+                break;
+        case 6:
+                bai6();
+                break;
+        case 7:
+                bai7();
+                break;
+        case 8: 
+                bai8();
+                break;
+        case 9:
+                bai9();
+                break;
+        case 10:
+                bai10();
+                break;
+            default:
+                break;
+                 }
+                
 function bai1(){
     let  dem = parseInt(prompt("Bắt đầu in"));
         while (dem <= 100) {
@@ -83,4 +119,22 @@ function bai9() {
             }
             console.log("Tổng:= " + tong);    
 }
-bai9();
+function fibonacci() {
+    let x = 0;
+    let y = 1;
+    let z = 0;
+    return function getNext() {
+        z = x + y;
+        x = y;
+        y = z;
+        return z;
+    }
+}
+function bai10() {
+    
+var fun = fibonacci();
+var n = parseInt(prompt("Nhập vào n"));
+for (let i = 0; i < n; i++) {
+    console.log(fun());
+    }
+}
