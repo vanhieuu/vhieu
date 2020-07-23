@@ -1,36 +1,45 @@
-let arr_empty = []; //Mảng rỗng
-let arr_numbers = [1, 2, 3, 4, 5, 6, 11];
-let arr_string = ['A' , 'B', 'C ', 'D'];
-let arr_mix = [ 1, 2, 3, 4, "T" , "C", true ] // k dùng 
-console.log(arr_numbers);
-// console.log(arr_numbers[arr_numbers.length - 1]); // lấy giá trị cuối cùng của mảng
-//     let countOdd = 0;
-//     let isLarger10 = false;
-// for (let i = 0; i < arr_numbers.length ; i++) {
-//     let element = arr_numbers[i];
-//         if (element % 2 === 1 ){
-//             countOdd++
-//         }
-//         if(element  > 10){
+// var arr = [];
+// arr[0]  = prompt("Nhập vào giá trị thứ nhất của mảng");
+// arr[1] = prompt("Nhập vào giá trị thứ 2 của mảng ");
+// arr[2] = prompt("Nhập vào giá trị thứ 3 của mảng");
+// arr[3] = prompt("Nhập vào giá trị thứ 4 của mảng");
+// arr[4] = prompt("Nhập vào giá trị thứ 5 của mảng");
+// arr = prompt("Nhập vào giá trị cho mảng ", arr.join());
+// for (var i = 0; i < arr.length ; i++){
+    
+// }
+//     console.log(arr[i]);
 
-//             isLarger1010 = true;
-//             break;
-//         }
-
+// var mangSo = [10];
+// nhapSo = Number(prompt("Nhập vào số lượng giá trị cho mảng" ));
+// for (let i = 0; i < nhapSo; i++) {
+//     var element = mangSo[i];
+//         element = Number(prompt("Nhập vào các phần từ của mảng"));
+      
+// }
+// console.log(mangSo[i]);
+// var mangSo = [];
+// var soLuong = prompt("Nhập vào số lượng phần tử của mảng");
+//     for (let i = 0; i < soLuong; i++) {
+//         var element = mangSo[i];
+//             element = prompt("Nhập các phần tử của mảng");
+//             console.log(element);
 //     }
-//         console.log(`có   ${countOdd} số lẻ` );
-//     console.log(isLarger1010);
-    // arr_numbers.push(7,8,9,33);
-    // console.log(arr_numbers);
-    // arr_numbers.unshift(1,5,3,2);
-    // console.log(arr_numbers);
-    // arr_numbers[17] = 10;
-    // console.log(arr_numbers);
-    console.log(arr_numbers);
-    console.log(arr_numbers);
-    let first = arr_numbers.shift();
-    let last = arr_numbers.pop();
-    let del = arr_numbers.splice(1,3)
-    console.log(last);
-    console.log(first);
-    console.log(del);
+function soChan() {
+    var soChan = [];
+var soLuongMang = Number(prompt("Nhập vào số lượng phần tử của mảng"));
+var countEven  = Number(0);
+var isLarge10 = false;
+    for (let i = 0; i < soLuongMang; i++) {
+        var element = Number(soChan[i]);
+        element = Number(prompt("Nhập các phần tử của mảng"));
+        if (element % 2 === 0) {
+                countEven++;
+        }
+        console.log(element);
+       
+    }
+    console.log("Có " + countEven + " số chẵn");
+
+}
+soChan();
