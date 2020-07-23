@@ -1,22 +1,3 @@
-// function soChan() {
-//     var soChan = [];
-// var soLuongMang = Number(prompt("Nhập vào số lượng phần tử của mảng"));
-// var countEven  = Number(0);
-// var isLarge10 = false;
-//     for (let i = 0; i < soLuongMang; i++) {
-//         var element = Number(soChan[i]);
-//         element = Number(prompt("Nhập các phần tử của mảng"));
-//         if (element % 2 === 0) {
-//                 countEven++;
-//         }
-//         console.log(element);
-       
-//     }
-//     console.log("Có " + countEven + " số chẵn");
-
-// }
-// soChan();
-///
 function bai1(){
     var arr = [];
     var numEven = [];
