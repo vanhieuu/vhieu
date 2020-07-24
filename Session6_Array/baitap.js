@@ -50,7 +50,7 @@ function bai1(){
         }
         console.log(arr);
         var newIndex = Number(prompt("Nhập vào  index mới"));
-        while (newIndex > arr.length) {
+        while (newIndex > arr.length || newIndex > 0) {
             console.log("Index vừa nhập lớn hơn độ dài mảng, vui lòng nhập lai");
             newIndex = Number(prompt("Nhập vào  index mới"));
         }
@@ -58,7 +58,6 @@ function bai1(){
         arr[newIndex] = newVal
         console.log(arr);
     }
-bai3();
 function bai4() {
         var arr = [];
         var txt = arr.length;
