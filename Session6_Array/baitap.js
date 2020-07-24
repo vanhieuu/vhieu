@@ -1,3 +1,4 @@
+
 function bai1(){
     var arr = [];
     var numEven = [];
@@ -12,12 +13,10 @@ function bai1(){
            {
                countEven ++
                 numEven = arr.filter(x => x % 2 == 0)
-               
-               
            }
            if(arr[i]  > 10){
            isLarge10++;
-            large10 = arr.filter(x => x >10);
+            large10 = arr.filter(x => x > 10);
            }
         }        
         
@@ -41,19 +40,25 @@ function bai1(){
             console.log("Tổng các phần tử của mảng:= " + sum);
             console.log("Trung bình cộng của mảng là := " + tbc);
     }
+
     function bai3() {
         var arr = [];
         var txt = arr.length;
-        txt = prompt("Nhập vào độ dài mảng");
+        txt = Number(prompt("Nhập vào độ dài mảng"));
         for (let i = 0; i < txt; i++) {
             arr.push(Number(prompt("Nhập vào các giá trị của mảng")));  
         }
         console.log(arr);
         var newIndex = Number(prompt("Nhập vào  index mới"));
+        while (newIndex > arr.length) {
+            console.log("Index vừa nhập lớn hơn độ dài mảng, vui lòng nhập lai");
+            newIndex = Number(prompt("Nhập vào  index mới"));
+        }
         var newVal = Number(prompt("Nhập vào giá trị  mới"));
         arr[newIndex] = newVal
         console.log(arr);
     }
+bai3();
 function bai4() {
         var arr = [];
         var txt = arr.length;
@@ -68,5 +73,4 @@ function bai4() {
         })
         console.log(newArr);
     }
-        
-bai4();
+    
