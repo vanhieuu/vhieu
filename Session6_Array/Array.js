@@ -111,7 +111,7 @@ for (let i = 0; i < totalNumber; i++) {
     arr.push(n);
 }
 
-// // 2. số chẵn và số lượng
+//  2. số chẵn và số lượng
 // console.log(`======== Bài 2 =========`);
 // let totalEven = 0;
 // for (let i = 0; i < arr.length; i++) {
@@ -123,7 +123,7 @@ for (let i = 0; i < totalNumber; i++) {
 // }
 // console.log(`Có ${totalEven} số chẵn`);
 
-// // cách 2;
+/// cách 2;
 // let arrEven = [];
 // for (let i = 0; i < arr.length; i++) {
 //     let value = arr[i];
