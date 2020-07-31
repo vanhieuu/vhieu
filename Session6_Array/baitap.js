@@ -139,7 +139,7 @@ function bai4() {
         arr.push(Number(prompt("Nhập vào các giá trị của mảng"))); 
         var value = arr[i] ;
            if ( min  > value){
-            min  = element;
+            min  = value;
         }
             if ( max < value)
             {

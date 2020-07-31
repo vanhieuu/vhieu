@@ -91,6 +91,8 @@ for (let i = 0; i < txt ; i++) {
          arrPhone[stt].price = Number(prompt("Nhập giá mới "));
          arrPhone[stt].brand = prompt("Nhập hãng mới ");
     
+///
+
          let max = arrPhone[0]
     for (let i = 0; i < txt ; i++) {
         const phone = arrPhone[i];
@@ -98,16 +100,16 @@ for (let i = 0; i < txt ; i++) {
         if (max.price < phone.price) {
             max = phone;
         }
+    }
             for (const key in phone) {
                  const value = phone[key];
                 console.log(`${key} : ${value}`);
                 }
-        if (  max.price = phone.price) {
-        }
-        for (const key in phone) {
-             const value = phone[key];
-            console.log(`${key} : ${value}`);
-            }
-        }
-        console.log(max.name);
+
+        // for (const key in phone) {
+        //      const value = phone[key];
+        //     console.log(`${key} : ${value}`);
+        //     }
+        // }
+        // console.log(max.name);
     
