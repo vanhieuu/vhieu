@@ -122,7 +122,12 @@ var phones = [
         'name' : 'Iphone X 256G',
         'price': 19e6,
         'brand': 'Apple'
-    }                   
+    },
+    {
+        'name': 'Xperia XZ1 Factory',
+        'price': 12e6,
+        'brand': "Sony"
+    },                    
 ];
 //1. Tìm điện thoại tên có chứa chữ 'Iphone'
 //2. Tìm đt có giá lớn hơn 18 triệu
@@ -238,5 +243,15 @@ function baitap7() {
                 tong += price
         }
         console.log(tong);           
-}   
+}  
 //8. Có bao nhiêu đt của hãng Sony
+function baitap8() {
+        var dem = 0;
+        for (let i = 0 ; i < phones.length; i++){
+            const phone = phones[i];
+            if(phone.brand === chuanHoa("Sony")){
+                dem ++
+            }
+        }
+        console.log(`có ${dem} điện thoại của hãng Sony`);   
+}
