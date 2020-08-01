@@ -58,7 +58,7 @@ function bai4() {
         console.log("Mảng ban đầu k có giá trị lớn hơn 10");
     }
 }
-bai4();
+
 //Bài 5: Mảng ban đàu có số chẵn hay không ?
 function bai5() {
     function isEven(value, index, arr) {
@@ -72,7 +72,6 @@ function bai5() {
         console.log("Mảng ban đầu không có số chẵn");
     }
 }
-bai5();
 
 //Bài 6: Tất cả giá trị của mảng có phải là số lẻ hay không ? 
  function  bai6() {
@@ -86,7 +85,7 @@ bai5();
             console.log("Mảng có số chẵn");
  }
 }
- bai6();
+
 //  var phones = ['iPhone X',
 //                 'Galaxy Note 10',
 //                 'Xperia 2 ' ];
@@ -101,8 +100,8 @@ bai5();
 var phones = [
     {
         'name': 'Iphone 11',
-        'price':23e6,
-        'brand': 'Apple',
+        'price': 23e6,
+        'brand': 'Apple'
     },
     {
         'name' : 'Samsung Note 10 Lite',
@@ -122,8 +121,8 @@ var phones = [
     {
         'name' : 'Iphone X 256G',
         'price': 19e6,
-        'brand': 'SamSung'
-    }
+        'brand': 'Apple'
+    }                   
 ];
 //1. Tìm điện thoại tên có chứa chữ 'Iphone'
 //2. Tìm đt có giá lớn hơn 18 triệu
@@ -138,22 +137,106 @@ var phones = [
 
 // 
 function print(phones) {
-    for (let i = 0; i < phones.length ; i++) {
+    for (var i = 0; i < phones.length ; i++) {
         const phone = phones[i];
         console.log(`#${i+1}`);
             for (const key in phone) {
                     const value = phone[key];
                     console.log(`${key} : ${value}`)
 }
-// Tìm điện thoại tên có giá lớn hơn 18tr
         }
     }
+    //Function chuẩn hóa chuỗi
+    function chuanHoa(str) {
+        return str.toLowerCase().replace(/(^|\s)\S/g,function(l){
+                return l.toUpperCase();
+        });
+    }
 
+    // Tìm điện thoại tên có giá lớn hơn 18tr
 function baitap1() {
    let largeThan18 = phones.filter(function(phone,index,arr) {
-           return phone.price > 18e6
+           return phone.price > 18e6;
 })
 print(largeThan18);
 }
 
-baitap1();
+// Tìm điện thoại tên có chứa chữ Iphone
+function baitap2() {
+        function isIphone(phone) {
+            return phone.name === chuanHoa("IPhone")
+            
+        }
+        let result = phones.filter(isIphone)
+           print(result);
+    }
+
+//3. Tìm điện thoại có giá trong khoảng 10 -> 20tr
+
+function baitap3() {
+    let searchPhone = phones.filter(function(phone,index,arr) {
+            return phone.price >= 10e6 && phone.price <= 20e6;
+ })
+ print(searchPhone);
+}
+
+//4. Có điện thoại nào có giá < 18 triệu không
+function baitap4() {
+    function hasLessthan18(phone) {
+        return phone.price <= 18e6;
+    }
+    let result = phones.filter(hasLessthan18)
+    if (phones.some(hasLessthan18))
+    {
+        print(result)
+    }
+    else {
+        console.log("Không có kết quả thỏa mãn");
+    }
+}
+
+//5. Tìm điện thoại của hãng Apple
+function baitap5() {
+    function applePhone(phone) {
+        return phone.brand === chuanHoa("apple");
+    }
+    let result = phones.filter(applePhone)
+    print(result);
+}
+
+//6a. Tìm điện thoại có giá cao nhất
+
+function baitap6a() {
+    let sortPhone = phones.sort(function(a,b){
+                return a.price - b.price;
+    })
+    let txt = sortPhone.length;
+    let max = sortPhone[txt-1]
+    for (let key in max){
+        let value = max[key]
+        console.log(`${key} : ${value}`)
+    }
+    }
+//6b. Tìm điện thoại có giá thấp nhất
+function baitap6b() {
+    let sortPhone = phones.sort(function(a,b){
+                return a.price - b.price;
+    })
+     let min = sortPhone[0]
+    for (let key in min){
+        let value = min[key]
+        console.log(`${key} : ${value}`)
+    }
+    }
+
+//7. Tính tổng giá trị của các điện thoại
+function baitap7() {
+   var tong = 0;
+   for (let i = 0; i < phones.length; i++) {
+    const phone = phones[i]
+                let price = phone.price;
+                tong += price
+        }
+        console.log(tong);           
+}   
+//8. Có bao nhiêu đt của hãng Sony
