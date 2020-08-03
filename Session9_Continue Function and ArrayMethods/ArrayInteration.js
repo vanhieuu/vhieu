@@ -153,8 +153,8 @@ function print(phones) {
     }
     //Function chuẩn hóa chuỗi
     function chuanHoa(str) {
-        return str.toLowerCase().replace(/(^|\s)\S/g,function(l){
-                return l.toUpperCase();
+        return str.toLowerCase().replace(/(^|\s)\S/g,function(string){
+                return string.toUpperCase();
         });
     }
 
@@ -173,7 +173,13 @@ function baitap2() {
             
         }
         let result = phones.filter(isIphone)
-           print(result);
+        let check = phones.some(isIphone)
+            if (check){
+                    print(result)
+            }
+           else{
+               console.log('Không có điện thoại nào thỏa mãn');
+           }
     }
 
 //3. Tìm điện thoại có giá trong khoảng 10 -> 20tr
@@ -244,6 +250,7 @@ function baitap7() {
         }
         console.log(tong);           
 }  
+baitap7();
 //8. Có bao nhiêu đt của hãng Sony
 function baitap8() {
         var dem = 0;
@@ -255,3 +262,34 @@ function baitap8() {
         }
         console.log(`có ${dem} điện thoại của hãng Sony`);   
 }
+
+//9. Sắp xếp điện thoại theo tên từ a -> z 
+function baitap9() {
+    let sortPhoneByName = phones.sort(function(a,b){
+        if(chuanHoa(a.name) < chuanHoa(b.name)){
+                return -1;
+        }
+        else{
+            return 1;
+        }
+})
+    print(sortPhoneByName)
+}
+//10. Sắp xếp điện thoại theo giá từ cao đến thấp
+function baitap10() {
+    let sortPhoneFromHighest = phones.sort(function(a,b){
+            return b.price - a.price;
+    })
+    print(sortPhoneFromHighest)
+}
+
+
+//11. Sắp xếp điện thoại theo giá từ thấp đến cao
+function bai11() {
+    
+let sortPhoneFromLowest = phones.sort(function(a,b){
+    return a.price - b.price;
+})
+    print(sortPhoneFromLowest)
+}
+print(phones)
