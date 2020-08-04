@@ -152,9 +152,9 @@ function print(phones) {
         }
     }
     //Function chuẩn hóa chuỗi
-    function chuanHoa(str) {
-        return str.toLowerCase().replace(/(^|\s)\S/g,function(string){
-                return string.toUpperCase();
+function chuanHoa(str) {
+    return str.toLowerCase().replace(/(^|\s)\S/g,function(string){
+        return string.toUpperCase();
         });
     }
 
@@ -170,7 +170,6 @@ print(largeThan18);
 function baitap2() {
         function isIphone(phone) {
             return phone.name === chuanHoa("IPhone")
-            
         }
         let result = phones.filter(isIphone)
         let check = phones.some(isIphone)
@@ -250,17 +249,15 @@ function baitap7() {
         }
         console.log(tong);           
 }  
-baitap7();
-//8. Có bao nhiêu đt của hãng Sony
-function baitap8() {
-        var dem = 0;
-        for (let i = 0 ; i < phones.length; i++){
-            const phone = phones[i];
-            if(phone.brand === chuanHoa("Sony")){
-                dem ++
-            }
-        }
-        console.log(`có ${dem} điện thoại của hãng Sony`);   
+
+//8. Có bao nhiêu điện thoại của hãng Sony
+function sonyPhone() {
+    let sonyPhone = phones.filter(function (phone) {
+        return phone.brand === chuanHoa("Sony")
+    })
+    let count = sonyPhone.length;
+    console.log(`Có ${count} điện thoại Sony`);
+    print(sonyPhone)
 }
 
 //9. Sắp xếp điện thoại theo tên từ a -> z 
@@ -275,6 +272,7 @@ function baitap9() {
 })
     print(sortPhoneByName)
 }
+baitap9();
 //10. Sắp xếp điện thoại theo giá từ cao đến thấp
 function baitap10() {
     let sortPhoneFromHighest = phones.sort(function(a,b){
@@ -282,8 +280,6 @@ function baitap10() {
     })
     print(sortPhoneFromHighest)
 }
-
-
 //11. Sắp xếp điện thoại theo giá từ thấp đến cao
 function bai11() {
     
@@ -292,4 +288,3 @@ let sortPhoneFromLowest = phones.sort(function(a,b){
 })
     print(sortPhoneFromLowest)
 }
-print(phones)
