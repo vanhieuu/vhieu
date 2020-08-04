@@ -170,7 +170,7 @@ print(largeThan18);
 function baitap2() {
         function isIphone(phone) {
             return phone.name === chuanHoa("IPhone")
-        }
+        }   
         let result = phones.filter(isIphone)
         let check = phones.some(isIphone)
             if (check){
@@ -271,8 +271,14 @@ function baitap9() {
         }
 })
     print(sortPhoneByName)
+}   
+function sortByName() {
+    let sortPhoneByName = phones.sort(function(p1,p2){
+        return p1.name.localeCompare(p2.name);
+    })
+    print(sortPhoneByName)
 }
-baitap9();
+sortByName();
 //10. Sắp xếp điện thoại theo giá từ cao đến thấp
 function baitap10() {
     let sortPhoneFromHighest = phones.sort(function(a,b){
