@@ -1,0 +1,35 @@
+
+    *{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .img-tittle{
+        text-align: center;
+    }
+
+    img.Anh1{
+            vertical-align: middle;
+        }
+        .tac-gia,#thoi-gian{
+            background-color: aqua;
+        }
+        .tac-gia{
+            color: crimson;
+            text-transform: uppercase;
+            text-align: right;
+            font-size: 15px;
+        }
+        #thoi-gian{
+            text-align: right;
+            color: #ffad33;
+        }
+body{
+    width: 50%;
+    margin: auto;
+    padding: 3cm;
+}
+h1{
+    margin-bottom: 50px;
+    padding: 20px 10px 30px;
+    border: 3px solid aqua;
+    border-radius: 10px;
+}
