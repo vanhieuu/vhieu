@@ -90,3 +90,12 @@ function printMenu(menu){
        document.getElementById("onClickWelcome").innerHTML = "Xin chào" + "~~~~~~~~~~~~~~~~~~~~Hello World~~~~~~~~~~~~~~~~~~~`"
    }
    //tạo thêm button mỗi khi click button là có thời gian hiện tại
+   function showTime() {
+       var d = new Date();
+       var time = document.getElementById("showTime");
+       var h = d.getHours();
+       var m = d.getMinutes();
+       var s = d.getSeconds();
+       time.innerHTML = h + ":" + m + ":" + s ; 
+        time.innerHTML = d;
+   }
