@@ -19,6 +19,7 @@ let matchedCard = document.getElementsByClassName("match")
 let starsList = document.querySelectorAll(".stars li");
 //declare modal
 let closeicon = document.querySelector(".close");
+
 let modal = document.getElementById("popup1")
 var openedCards = [];
 
@@ -38,7 +39,6 @@ function shuffle(arr) {
 
     }
     return arr;
-
 }
 
         //tráo bài khi load lại trang
@@ -111,8 +111,8 @@ function startGame() {
         function matched() {
             openedCards[0].classList.add("match");
             openedCards[1].classList.add("match");
-            openedCards[0].classList.remove("show", "open" );
-            openedCards[1].classList.remove("show", "open" );
+            openedCards[0].classList.remove("show", "open", "no-event" );
+            openedCards[1].classList.remove("show", "open","no-event");
             openedCards = [];
         }
 
@@ -123,8 +123,8 @@ function startGame() {
             openedCards[1].classList.add("unmatched");
             disable();
             setTimeout(function () {
-                openedCards[0].classList.remove("show", "open", "unmatched");
-                openedCards[1].classList.remove("show", "open", "unmatched");
+                openedCards[0].classList.remove("show", "open","no-event", "unmatched");
+                openedCards[1].classList.remove("show", "open","no-event", "unmatched");
                 enable();
                 openedCards = [];
             },1100);
@@ -132,17 +132,17 @@ function startGame() {
 
         // Vô hiệu hóa lá bài tạm thời
         function disable(){
-            Array.prototype.filter.call(cards, function (cards){
-                card.classList.add("disable")
+            Array.prototype.filter.call(cards, function (card){
+                card.classList.add('disabled')
             });
         }
 
         // kích hoạt lá bài và vô hiệu hóa các lá bài trùng nhau
         function enable() {
-                Array.prototype.filter.call(cards, function (cards){
-                    card.classList.remove("disable");
+                Array.prototype.filter.call(cards, function (card){
+                    card.classList.remove('disabled');
                         for (let i = 0; i < matchedCard.length; i++) {
-                            matchedCard[i].classList.add("disable")
+                            matchedCard[i].classList.add("disabled")
                         }
                 });     
         }
@@ -200,7 +200,7 @@ function startGame() {
                 finalTime = timer.innerHTML;
 
                     modal.classList.add("show");
-                    var startRating = document.querySelector(".stars").innerHTML
+                    var starRating = document.querySelector(".stars").innerHTML
 
 
                     document.getElementById("finalMove").innerHTML = moves;
@@ -216,6 +216,9 @@ function startGame() {
                 startGame();
             });
         }
+
+
+
         function playAgain(){
             modal.classList.remove("show");
             startGame();
@@ -240,13 +243,13 @@ function startGame() {
     
     // Khởi tạo giá trị bộ bài
     // Khởi tạo giá trị .deck bên htm
-    //     const deck = document.querySelector(".deck")
-    //     function startGame(){
-    //         var shuffleCards = shuffle(cards) // khởi tạo giá trị tráo bài
-    //             for (let i = 0; i < shuffle.length; i++) {
-    //                 [].forEach.call(shuffleCards, function(items){
-    //                     deck.appendChild(items)
-    //                 })
-    //             }        
+        // const deck = document.querySelector(".deck")
+        // function startGame(){
+        //     var shuffleCards = shuffle(cards) // khởi tạo giá trị tráo bài
+        //         for (let i = 0; i < shuffle.length; i++) {
+        //             [].forEach.call(shuffleCards, function(items){
+        //                 deck.appendChild(items)
+        //             })
+        //         }        
     //     }
     // }
